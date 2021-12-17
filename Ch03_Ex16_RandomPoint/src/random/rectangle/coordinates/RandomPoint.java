@@ -21,7 +21,7 @@ public class RandomPoint {
 		
 		//Applying pythagoras theorem
 		//determine the hypotenuse
-		int hypotenuse = (int)Math.sqrt(Math.pow(width, 2) + Math.pow(length, 2));
+		//double hypotenuse = Math.sqrt(Math.pow(width, 2) + Math.pow(length, 2));
 		//System.out.println(hypotenuse);
 		
 		//create Scanner for user prompts
@@ -32,7 +32,8 @@ public class RandomPoint {
 		int xCoordinate = input.nextInt();
 		System.out.println("if your x-coordinate is " + xCoordinate);
 		//Determine the y - coordinate
-		int yCoordinate = (int)Math.sqrt(Math.pow(hypotenuse, 2) - Math.pow(xCoordinate, 2));
+		//int yCoordinate = (int)Math.sqrt(Math.pow(hypotenuse, 2) - Math.pow(xCoordinate, 2));
+		int yCoordinate = 2 * xCoordinate;
 		System.out.println("the your y-coordinate is: " + yCoordinate);
 		
 		System.out.println("===============================================================");
@@ -41,7 +42,8 @@ public class RandomPoint {
 		System.out.println("Enter your y-coordinate to determine your x-doordinate: ");
 		yCoordinate = input.nextInt();
 		System.out.println("if your y-coordinate is: " + yCoordinate);
-		xCoordinate = (int)Math.sqrt(Math.pow(hypotenuse, 2) - Math.pow(yCoordinate, 2));
+		//xCoordinate = (int)Math.sqrt(Math.pow(hypotenuse, 2) - Math.pow(yCoordinate, 2));
+		xCoordinate = yCoordinate / 2;
 		System.out.println(" the your x-coordinate is: " + xCoordinate);
 		
 		
