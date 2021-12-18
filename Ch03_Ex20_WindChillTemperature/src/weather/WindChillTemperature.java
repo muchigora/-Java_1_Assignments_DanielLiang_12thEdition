@@ -3,6 +3,8 @@
  */
 package weather;
 
+import java.util.Scanner;
+
 /**
  * Ch03 Excercise 20 Science: wind-chill temperature
  * Programming Exercise 2.17 gives a formula to compute the wind-chill temperature. The formula is valid for 
@@ -27,8 +29,30 @@ package weather;
 public class WindChillTemperature {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		// Declare Variables
+		double twc; 	//wind-chill temperature
+		double ta;		//outside temperature
+		double v; 		// windspeed
+				
+		//Prompt user for data
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter Temperature between -58F and 41F: ");
+		ta = input.nextDouble();
+				
+		System.out.println("Enter wind-speed 2mph or greater: ");
+		v = input.nextDouble();
+				
+		//Computation
+		if((ta >= -58 && ta <= 41) && v > 2) {
+			twc = 35.74 + 0.6215 * ta - 35.75 * Math.pow(v, 0.16) + 0.4275 * ta * Math.pow(v, 0.16);
+			//Display Result
+			System.out.println("The wind-chill index is: "+ twc);
+		}
+		else {
+			System.out.println("Invalid Input! \nTo be Valid \nTemperature MUST range from -58F to 41F" 
+					+"\nWind speed MUST be greater than 2mph");
+		}
+		
 	}
 
 }
