@@ -3,6 +3,8 @@
  */
 package math.geometry.circle;
 
+import java.util.Scanner;
+
 /**
  * Chapter 3 Exercise 22 Geometry: Point in a Circle?
  * Write a program that prompts the user to enter a point (x, y) and checks whether the point is within 
@@ -16,12 +18,27 @@ package math.geometry.circle;
  *
  */
 public class PointInACircle {
-
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// Create scanner
+		Scanner input = new Scanner(System.in);
+		
+		//Prompt user for coordinates
+		System.out.println("Enter x-coordinate: ");
+		int x = input.nextInt();
+		System.out.println("Enter y-coordinate: ");
+		int y = input.nextInt();
+		System.out.println("Point entered is: (" + x + "," + y +")");
+		
+		//Distance from center of the circle
+		double distance = Math.sqrt(Math.pow((x-0), 2) + Math.pow((y-0), 2));
+		System.out.println("Distance from center is: " + distance);
+		
+		//determine if distance point is within circle
+		if(distance <= 10)
+			System.out.println("Point (" + x + "," + y +") is inside the circle ");
+		else
+			System.out.println("Point (" + x + "," + y +") is outside the circle ");
 
 	}
 
