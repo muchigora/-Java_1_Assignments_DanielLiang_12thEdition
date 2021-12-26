@@ -3,6 +3,8 @@
  */
 package geometry;
 
+import java.util.Scanner;
+
 /**
  * Ch3 Ex26 Geometry: intersecting point
  * Two points on line 1 are given as (x1, y1) and x2, y2) and on line 2 as (x3, y3) and (x4, y4), 
@@ -22,7 +24,38 @@ public class IntersectingPoints {
 
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		// Prompt user to enter the points for the 4 lines
+		//line 1
+		System.out.println("Enter coordinates for line 1: ");
+		System.out.println("Point 1 x: ");
+		double x1 = input.nextDouble();
+		System.out.println("Point 1 y: ");
+		double y1 = input.nextDouble();
+		System.out.println("Line 1, Point 1 ("+x1+","+y1+")");
+		System.out.println("Point 2 x: ");
+		double x2 = input.nextDouble();
+		System.out.println("Point 2 x: ");
+		double y2 = input.nextDouble();
+		System.out.println("Line 1, Point 2 ("+x2+","+y2+")");
+		
+		//line2
+		System.out.println("Enter coordinates for line 2: ");
+		System.out.println("Point 1 x: ");
+		double x3 = input.nextDouble();
+		System.out.println("Point 1 y: ");
+		double y3 = input.nextDouble();
+		System.out.println("Line 2, Point 1 ("+x3+","+y3+")");
+		System.out.println("Point 2 x: ");
+		double x4 = input.nextDouble();
+		System.out.println("Point 2 x: ");
+		double y4 = input.nextDouble();
+		System.out.println("Line 2, Point 2 ("+x4+","+y4+")");
+		
+		//
+		
+		
+		
 
 	}
 
